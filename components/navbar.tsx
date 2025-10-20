@@ -43,6 +43,8 @@ export default function Navbar() {
                 alt="Hustle Muscle Logo"
                 width={96}
                 height={96}
+                priority
+                quality={80}
                 className="w-full h-full object-contain"
               />
             </div>

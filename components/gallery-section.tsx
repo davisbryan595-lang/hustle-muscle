@@ -3,6 +3,7 @@
 import type React from "react"
 
 import { useState } from "react"
+import Image from "next/image"
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 
 const galleryItems = [
@@ -65,20 +66,29 @@ export default function GallerySection() {
             onClick={handleSliderChange}
           >
             {/* After image (background) */}
-            <img
-              src={currentItem.after || "/placeholder.svg"}
-              alt="After detailing"
-              className="absolute inset-0 w-full h-full object-cover"
-            />
+            <div className="absolute inset-0">
+              <Image
+                src={currentItem.after || "/placeholder.svg"}
+                alt="After detailing"
+                fill
+                quality={80}
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 90vw, 900px"
+              />
+            </div>
 
             {/* Before image (overlay) */}
             <div className="absolute inset-0 overflow-hidden" style={{ width: `${sliderPosition}%` }}>
-              <img
-                src={currentItem.before || "/placeholder.svg"}
-                alt="Before detailing"
-                className="w-full h-full object-cover"
-                style={{ width: `${(100 / sliderPosition) * 100}%` }}
-              />
+              <div className="relative w-full h-full" style={{ width: `${(100 / sliderPosition) * 100}%` }}>
+                <Image
+                  src={currentItem.before || "/placeholder.svg"}
+                  alt="Before detailing"
+                  fill
+                  quality={80}
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 90vw, 900px"
+                />
+              </div>
             </div>
 
             {/* Slider handle */}

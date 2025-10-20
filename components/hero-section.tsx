@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { Phone, Calendar } from "lucide-react"
+import Image from "next/image"
 
 export default function HeroSection() {
   const [isHovered, setIsHovered] = useState(false)
@@ -9,13 +10,17 @@ export default function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black pt-20">
       {/* Background image with overlay */}
-      <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{
-          backgroundImage: "url('https://images.pexels.com/photos/372810/pexels-photo-372810.jpeg?w=1920&h=1080&fit=crop')",
-          opacity: 0.35,
-        }}
-      />
+      <div className="absolute inset-0 overflow-hidden">
+        <Image
+          src="https://images.pexels.com/photos/372810/pexels-photo-372810.jpeg?w=1920&h=1080&fit=crop"
+          alt="Professional car detailing background"
+          fill
+          priority
+          quality={75}
+          className="object-cover opacity-35"
+          sizes="100vw"
+        />
+      </div>
 
       {/* Animated gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70" />
