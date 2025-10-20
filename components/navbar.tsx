@@ -64,7 +64,7 @@ export default function Navbar() {
           {/* Call to Action Button */}
           <div className="hidden md:block">
             <a
-              href="tel:(910)386-9530"
+              href="tel:+19103869530"
               className="px-6 py-2 bg-accent text-black font-bold rounded-lg hover:bg-accent/90 transition-all duration-300 hover:shadow-lg hover:shadow-accent/50"
             >
               Call Now
@@ -96,7 +96,7 @@ export default function Navbar() {
                 </a>
               ))}
               <a
-                href="tel:(910)386-9530"
+                href="tel:+19103869530"
                 className="block px-6 py-2 bg-accent text-black font-bold rounded-lg hover:bg-accent/90 transition-all duration-300 text-center"
               >
                 Call Now

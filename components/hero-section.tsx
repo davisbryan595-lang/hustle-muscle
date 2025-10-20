@@ -50,7 +50,7 @@ export default function HeroSection() {
           </button>
 
           <a
-            href="tel:(910)386-9530"
+            href="tel:+19103869530"
             className="relative px-8 py-4 border-2 border-accent text-accent font-bold text-lg rounded-lg hover:bg-accent hover:text-black transition-all duration-300 flex items-center gap-2 overflow-hidden group hover:shadow-lg hover:shadow-accent/50 hover:scale-105 active:scale-95"
           >
             <span className="relative z-10 flex items-center gap-2">
