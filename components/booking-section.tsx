@@ -52,7 +52,7 @@ export default function BookingSection() {
                 </div>
                 <div>
                   <h3 className="text-white font-semibold mb-1">Phone</h3>
-                  <a href="tel:(910)386-9530" className="text-gray-400 hover:text-accent transition-colors">
+                  <a href="tel:+19103869530" className="text-gray-400 hover:text-accent transition-colors">
                     (910) 386-9530
                   </a>
                 </div>
