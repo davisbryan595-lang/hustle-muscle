@@ -8,21 +8,21 @@ import { ChevronLeft, ChevronRight } from 'lucide-react'
 const galleryItems = [
   {
     id: 1,
-    before: "https://images.unsplash.com/photo-1552820728-8ac41f1ce891?w=800&h=600&fit=crop",
-    after: "https://images.unsplash.com/photo-1601584942197-04bbb2b033d7?w=800&h=600&fit=crop",
+    before: "https://images.pexels.com/photos/4870739/pexels-photo-4870739.jpeg?w=800&h=600&fit=crop",
+    after: "https://images.pexels.com/photos/7154623/pexels-photo-7154623.jpeg?w=800&h=600&fit=crop",
     title: "Full Exterior Detail",
   },
   {
     id: 2,
-    before: "https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=800&h=600&fit=crop",
-    after: "https://images.unsplash.com/photo-1552820728-8ac41f1ce891?w=800&h=600&fit=crop",
+    before: "https://images.pexels.com/photos/5233264/pexels-photo-5233264.jpeg?w=800&h=600&fit=crop",
+    after: "https://images.pexels.com/photos/6872601/pexels-photo-6872601.jpeg?w=800&h=600&fit=crop",
     title: "Interior Deep Clean",
   },
   {
     id: 3,
-    before: "https://images.unsplash.com/photo-1489824904134-891ab64532f1?w=800&h=600&fit=crop",
-    after: "https://images.unsplash.com/photo-1601584942197-04bbb2b033d7?w=800&h=600&fit=crop",
-    title: "Ceramic Coating",
+    before: "https://images.pexels.com/photos/372810/pexels-photo-372810.jpeg?w=800&h=600&fit=crop",
+    after: "https://images.pexels.com/photos/31124682/pexels-photo-31124682.jpeg?w=800&h=600&fit=crop",
+    title: "Professional Ceramic Coating",
   },
 ]
 
@@ -60,7 +60,7 @@ export default function GallerySection() {
         {/* Main slider */}
         <div className="mb-12">
           <div
-            className="relative w-full h-96 rounded-lg overflow-hidden cursor-col-resize bg-gray-900"
+            className="relative w-full h-96 rounded-lg overflow-hidden cursor-col-resize bg-gray-900 transition-all duration-300 hover:shadow-2xl hover:shadow-accent/20"
             onMouseMove={handleSliderChange}
             onClick={handleSliderChange}
           >
@@ -109,7 +109,7 @@ export default function GallerySection() {
         <div className="flex justify-center items-center gap-4">
           <button
             onClick={handlePrev}
-            className="p-3 bg-accent text-black rounded-full hover:bg-accent/80 transition-colors"
+            className="p-3 bg-accent text-black rounded-full hover:bg-accent/80 transition-all duration-300 hover:shadow-lg hover:shadow-accent/50 hover:scale-110 active:scale-95"
           >
             <ChevronLeft className="w-6 h-6" />
           </button>
@@ -119,8 +119,10 @@ export default function GallerySection() {
               <button
                 key={idx}
                 onClick={() => setCurrentIndex(idx)}
-                className={`w-3 h-3 rounded-full transition-all ${
-                  idx === currentIndex ? "bg-accent w-8" : "bg-gray-600 hover:bg-gray-500"
+                className={`rounded-full transition-all duration-300 ${
+                  idx === currentIndex
+                    ? "bg-accent w-8 h-3 shadow-lg shadow-accent/50"
+                    : "bg-gray-600 w-3 h-3 hover:bg-gray-500 hover:scale-125"
                 }`}
               />
             ))}
@@ -128,7 +130,7 @@ export default function GallerySection() {
 
           <button
             onClick={handleNext}
-            className="p-3 bg-accent text-black rounded-full hover:bg-accent/80 transition-colors"
+            className="p-3 bg-accent text-black rounded-full hover:bg-accent/80 transition-all duration-300 hover:shadow-lg hover:shadow-accent/50 hover:scale-110 active:scale-95"
           >
             <ChevronRight className="w-6 h-6" />
           </button>
