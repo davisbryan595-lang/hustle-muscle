@@ -9,5 +9,3 @@ import {
 export function ThemeProvider({ children, ...props }: ThemeProviderProps) {
   return <NextThemesProvider attribute="class" defaultTheme="dark" enableSystem {...props}>{children}</NextThemesProvider>
 }
-
-export default ThemeProvider
