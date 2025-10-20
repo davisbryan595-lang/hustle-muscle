@@ -1,6 +1,6 @@
 export default function AboutSection() {
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black">
+    <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 bg-black">
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
@@ -33,11 +33,11 @@ export default function AboutSection() {
           </div>
 
           {/* Image */}
-          <div className="relative h-96 rounded-lg overflow-hidden">
+          <div className="relative h-96 rounded-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-accent/20 group">
             <img
-              src="https://images.unsplash.com/photo-1601584942197-04bbb2b033d7?w=800&h=600&fit=crop"
+              src="https://images.pexels.com/photos/31124682/pexels-photo-31124682.jpeg?w=800&h=600&fit=crop"
               alt="Professional detailing in progress"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
           </div>

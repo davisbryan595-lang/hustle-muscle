@@ -7,31 +7,21 @@ export default function HeroSection() {
   const [isHovered, setIsHovered] = useState(false)
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black pt-20">
       {/* Background image with overlay */}
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1552820728-8ac41f1ce891?w=1920&h=1080&fit=crop')",
-          opacity: 0.3,
+          backgroundImage: "url('https://images.pexels.com/photos/372810/pexels-photo-372810.jpeg?w=1920&h=1080&fit=crop')",
+          opacity: 0.35,
         }}
       />
 
       {/* Animated gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70" />
 
       {/* Content */}
       <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
-        {/* Logo/Brand */}
-        <div className="mb-8 inline-block">
-          <div className="flex items-center justify-center gap-3 mb-4">
-            <div className="w-12 h-12 bg-accent rounded-lg flex items-center justify-center">
-              <span className="text-black font-bold text-xl">💪</span>
-            </div>
-            <span className="text-accent text-sm font-semibold tracking-widest">HUSTLE MUSCLE</span>
-          </div>
-        </div>
-
         {/* Main heading */}
         <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-6 tracking-tight">
           Detailing That Works
@@ -50,21 +40,24 @@ export default function HeroSection() {
           <button
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
-            className="relative px-8 py-4 bg-accent text-black font-bold text-lg rounded-lg overflow-hidden group transition-all duration-300 hover:shadow-2xl hover:shadow-accent/50"
+            className="relative px-8 py-4 bg-accent text-black font-bold text-lg rounded-lg overflow-hidden group transition-all duration-300 hover:shadow-2xl hover:shadow-accent/50 hover:scale-105 active:scale-95"
           >
             <span className="relative z-10 flex items-center gap-2">
               <Calendar className="w-5 h-5" />
               Book Now
             </span>
-            <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
+            <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           </button>
 
           <a
-            href="tel:(910)386-9530"
-            className="px-8 py-4 border-2 border-accent text-accent font-bold text-lg rounded-lg hover:bg-accent hover:text-black transition-all duration-300 flex items-center gap-2"
+            href="tel:+19103869530"
+            className="relative px-8 py-4 border-2 border-accent text-accent font-bold text-lg rounded-lg hover:bg-accent hover:text-black transition-all duration-300 flex items-center gap-2 overflow-hidden group hover:shadow-lg hover:shadow-accent/50 hover:scale-105 active:scale-95"
           >
-            <Phone className="w-5 h-5" />
-            Call Now
+            <span className="relative z-10 flex items-center gap-2">
+              <Phone className="w-5 h-5" />
+              Call Now
+            </span>
+            <div className="absolute inset-0 bg-accent opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10" />
           </a>
         </div>
 

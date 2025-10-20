@@ -30,7 +30,7 @@ const pricingPlans = [
 
 export default function PricingSection() {
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-950">
+    <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-950">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">
@@ -43,48 +43,53 @@ export default function PricingSection() {
           {pricingPlans.map((plan, idx) => (
             <div
               key={idx}
-              className={`relative rounded-lg p-8 transition-all duration-300 ${
+              className={`relative rounded-lg p-8 transition-all duration-300 overflow-hidden group ${
                 plan.highlighted
-                  ? "bg-accent text-black border-2 border-accent shadow-2xl shadow-accent/30 scale-105"
-                  : "bg-black border border-gray-800 text-white hover:border-accent"
+                  ? "bg-accent text-black border-2 border-accent shadow-2xl shadow-accent/30 scale-105 hover:shadow-accent/50 hover:scale-110"
+                  : "bg-black border border-gray-800 text-white hover:border-accent hover:shadow-2xl hover:shadow-accent/20 hover:-translate-y-2"
               }`}
             >
+              {!plan.highlighted && (
+                <div className="absolute inset-0 bg-gradient-to-br from-accent/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              )}
               {plan.highlighted && (
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-black px-4 py-1 rounded-full text-accent text-xs font-bold">
                   POPULAR
                 </div>
               )}
 
-              <h3 className={`text-2xl font-bold mb-2 ${plan.highlighted ? "text-black" : "text-white"}`}>
-                {plan.name}
-              </h3>
-              <p className={`text-sm mb-6 ${plan.highlighted ? "text-black/70" : "text-gray-400"}`}>
-                {plan.description}
-              </p>
+              <div className="relative z-10">
+                <h3 className={`text-2xl font-bold mb-2 ${plan.highlighted ? "text-black" : "text-white"}`}>
+                  {plan.name}
+                </h3>
+                <p className={`text-sm mb-6 ${plan.highlighted ? "text-black/70" : "text-gray-400"}`}>
+                  {plan.description}
+                </p>
 
-              <div className="mb-8">
-                <span className="text-4xl font-bold">{plan.price}</span>
-                <span className={`text-sm ${plan.highlighted ? "text-black/70" : "text-gray-400"}`}> per service</span>
+                <div className="mb-8">
+                  <span className="text-4xl font-bold">{plan.price}</span>
+                  <span className={`text-sm ${plan.highlighted ? "text-black/70" : "text-gray-400"}`}> per service</span>
+                </div>
+
+                <ul className="space-y-4 mb-8">
+                  {plan.features.map((feature, fidx) => (
+                    <li key={fidx} className="flex items-center gap-3">
+                      <Check className={`w-5 h-5 ${plan.highlighted ? "text-black" : "text-accent"}`} />
+                      <span className={plan.highlighted ? "text-black" : "text-gray-300"}>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <button
+                  className={`w-full py-3 rounded-lg font-bold transition-all ${
+                    plan.highlighted
+                      ? "bg-black text-accent hover:bg-gray-900 hover:shadow-lg hover:shadow-black/50"
+                      : "bg-accent text-black hover:bg-accent/90 hover:shadow-lg hover:shadow-accent/50"
+                  }`}
+                >
+                  Book Service
+                </button>
               </div>
-
-              <ul className="space-y-4 mb-8">
-                {plan.features.map((feature, fidx) => (
-                  <li key={fidx} className="flex items-center gap-3">
-                    <Check className={`w-5 h-5 ${plan.highlighted ? "text-black" : "text-accent"}`} />
-                    <span className={plan.highlighted ? "text-black" : "text-gray-300"}>{feature}</span>
-                  </li>
-                ))}
-              </ul>
-
-              <button
-                className={`w-full py-3 rounded-lg font-bold transition-all ${
-                  plan.highlighted
-                    ? "bg-black text-accent hover:bg-gray-900"
-                    : "bg-accent text-black hover:bg-accent/90"
-                }`}
-              >
-                Book Service
-              </button>
             </div>
           ))}
         </div>
