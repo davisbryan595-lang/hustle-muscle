@@ -40,21 +40,24 @@ export default function HeroSection() {
           <button
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
-            className="relative px-8 py-4 bg-accent text-black font-bold text-lg rounded-lg overflow-hidden group transition-all duration-300 hover:shadow-2xl hover:shadow-accent/50"
+            className="relative px-8 py-4 bg-accent text-black font-bold text-lg rounded-lg overflow-hidden group transition-all duration-300 hover:shadow-2xl hover:shadow-accent/50 hover:scale-105 active:scale-95"
           >
             <span className="relative z-10 flex items-center gap-2">
               <Calendar className="w-5 h-5" />
               Book Now
             </span>
-            <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
+            <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           </button>
 
           <a
             href="tel:(910)386-9530"
-            className="px-8 py-4 border-2 border-accent text-accent font-bold text-lg rounded-lg hover:bg-accent hover:text-black transition-all duration-300 flex items-center gap-2"
+            className="relative px-8 py-4 border-2 border-accent text-accent font-bold text-lg rounded-lg hover:bg-accent hover:text-black transition-all duration-300 flex items-center gap-2 overflow-hidden group hover:shadow-lg hover:shadow-accent/50 hover:scale-105 active:scale-95"
           >
-            <Phone className="w-5 h-5" />
-            Call Now
+            <span className="relative z-10 flex items-center gap-2">
+              <Phone className="w-5 h-5" />
+              Call Now
+            </span>
+            <div className="absolute inset-0 bg-accent opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10" />
           </a>
         </div>
 
