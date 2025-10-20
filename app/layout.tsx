@@ -2,7 +2,6 @@ import type React from "react"
 import type { Metadata } from "next"
 import { Geist, Geist_Mono } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
-import { SpeedInsights } from "@vercel/speed-insights/next"
 import { ThemeProvider } from "@/components/theme-provider"
 import "./globals.css"
 
@@ -39,11 +38,12 @@ export const metadata: Metadata = {
   },
   robots: "index, follow",
   authors: [{ name: "Hustle Muscle" }],
-  viewport: "width=device-width, initial-scale=1, maximum-scale=5",
   icons: {
     icon: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75' fill='%23EAC452'>💪</text></svg>",
   },
 }
+
+export const viewport = { width: "device-width", initialScale: 1, maximumScale: 5 }
 
 export default function RootLayout({
   children,
@@ -63,7 +63,6 @@ export default function RootLayout({
           {children}
         </ThemeProvider>
         <Analytics />
-        <SpeedInsights />
       </body>
     </html>
   )
