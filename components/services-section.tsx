@@ -38,7 +38,7 @@ export default function ServicesSection() {
   const [hoveredId, setHoveredId] = useState<number | null>(null)
 
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-950">
+    <section id="services" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-950">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">
