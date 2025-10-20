@@ -36,17 +36,16 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <div className="flex items-center gap-3">
-            <div className="relative w-10 h-10 transition-transform duration-300 hover:scale-110">
+          <div className="flex items-center">
+            <div className="relative w-12 h-12 transition-transform duration-300 hover:scale-110">
               <Image
-                src="/placeholder-logo.svg"
+                src="https://cdn.builder.io/api/v1/image/assets%2F6a80af1db8104ff4a1b5bea732d858c0%2Ff2b50cd12c204976bcc9d8d85d404b01?format=webp&width=800"
                 alt="Hustle Muscle Logo"
-                width={40}
-                height={40}
-                className="w-full h-full"
+                width={48}
+                height={48}
+                className="w-full h-full object-contain"
               />
             </div>
-            <span className="text-white font-bold text-lg hidden sm:inline">Hustle Muscle</span>
           </div>
 
           {/* Desktop Navigation */}
