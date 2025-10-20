@@ -7,31 +7,21 @@ export default function HeroSection() {
   const [isHovered, setIsHovered] = useState(false)
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black pt-20">
       {/* Background image with overlay */}
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1552820728-8ac41f1ce891?w=1920&h=1080&fit=crop')",
-          opacity: 0.3,
+          backgroundImage: "url('https://images.pexels.com/photos/372810/pexels-photo-372810.jpeg?w=1920&h=1080&fit=crop')",
+          opacity: 0.35,
         }}
       />
 
       {/* Animated gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70" />
 
       {/* Content */}
       <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
-        {/* Logo/Brand */}
-        <div className="mb-8 inline-block">
-          <div className="flex items-center justify-center gap-3 mb-4">
-            <div className="w-12 h-12 bg-accent rounded-lg flex items-center justify-center">
-              <span className="text-black font-bold text-xl">💪</span>
-            </div>
-            <span className="text-accent text-sm font-semibold tracking-widest">HUSTLE MUSCLE</span>
-          </div>
-        </div>
-
         {/* Main heading */}
         <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-6 tracking-tight">
           Detailing That Works
