@@ -57,10 +57,13 @@ export default function ServicesSection() {
                 key={service.id}
                 onMouseEnter={() => setHoveredId(service.id)}
                 onMouseLeave={() => setHoveredId(null)}
-                className="group relative bg-black border border-gray-800 rounded-lg p-6 transition-all duration-300 hover:border-accent hover:shadow-2xl hover:shadow-accent/20 hover:-translate-y-2 cursor-pointer"
+                className="group relative bg-black border border-gray-800 rounded-lg p-6 transition-all duration-300 hover:border-accent hover:shadow-2xl hover:shadow-accent/20 hover:-translate-y-2 cursor-pointer overflow-hidden"
               >
+                {/* Liquid gradient background effect */}
+                <div className="absolute inset-0 bg-gradient-to-br from-accent/15 via-transparent to-accent/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
                 {/* Glow effect */}
-                <div className="absolute inset-0 bg-gradient-to-br from-accent/10 to-transparent opacity-0 group-hover:opacity-100 rounded-lg transition-opacity duration-300" />
+                <div className="absolute -inset-1 bg-gradient-to-br from-accent/20 to-transparent opacity-0 group-hover:opacity-75 blur-xl transition-opacity duration-300 rounded-lg" />
 
                 <div className="relative z-10">
                   {/* Icon */}

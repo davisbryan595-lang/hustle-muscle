@@ -85,7 +85,7 @@ export default function BookingSection() {
           </div>
 
           {/* Booking Form */}
-          <div className="bg-gray-950 rounded-lg p-8 border border-gray-800">
+          <div className="bg-gray-950 rounded-lg p-8 border border-gray-800 transition-all duration-300 hover:shadow-2xl hover:shadow-accent/20 hover:border-accent/50 group">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label className="block text-white font-semibold mb-2">Name</label>
@@ -95,7 +95,7 @@ export default function BookingSection() {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-black border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:border-accent focus:outline-none transition-colors"
+                  className="w-full px-4 py-3 bg-black border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:border-accent focus:outline-none transition-all duration-300 hover:border-accent/50 focus:shadow-lg focus:shadow-accent/20"
                   placeholder="Your name"
                 />
               </div>
@@ -109,7 +109,7 @@ export default function BookingSection() {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-black border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:border-accent focus:outline-none transition-colors"
+                    className="w-full px-4 py-3 bg-black border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:border-accent focus:outline-none transition-all duration-300 hover:border-accent/50 focus:shadow-lg focus:shadow-accent/20"
                     placeholder="your@email.com"
                   />
                 </div>
@@ -121,7 +121,7 @@ export default function BookingSection() {
                     value={formData.phone}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-black border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:border-accent focus:outline-none transition-colors"
+                    className="w-full px-4 py-3 bg-black border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:border-accent focus:outline-none transition-all duration-300 hover:border-accent/50 focus:shadow-lg focus:shadow-accent/20"
                     placeholder="(910) 000-0000"
                   />
                 </div>
@@ -134,7 +134,7 @@ export default function BookingSection() {
                   value={formData.service}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-black border border-gray-700 rounded-lg text-white focus:border-accent focus:outline-none transition-colors"
+                  className="w-full px-4 py-3 bg-black border border-gray-700 rounded-lg text-white focus:border-accent focus:outline-none transition-all duration-300 hover:border-accent/50 focus:shadow-lg focus:shadow-accent/20"
                 >
                   <option value="">Select a service</option>
                   <option value="exterior">Exterior Detail</option>
@@ -152,7 +152,7 @@ export default function BookingSection() {
                   value={formData.date}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-black border border-gray-700 rounded-lg text-white focus:border-accent focus:outline-none transition-colors"
+                  className="w-full px-4 py-3 bg-black border border-gray-700 rounded-lg text-white focus:border-accent focus:outline-none transition-all duration-300 hover:border-accent/50 focus:shadow-lg focus:shadow-accent/20"
                 />
               </div>
 
@@ -163,7 +163,7 @@ export default function BookingSection() {
                   value={formData.message}
                   onChange={handleChange}
                   rows={4}
-                  className="w-full px-4 py-3 bg-black border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:border-accent focus:outline-none transition-colors resize-none"
+                  className="w-full px-4 py-3 bg-black border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:border-accent focus:outline-none transition-all duration-300 hover:border-accent/50 focus:shadow-lg focus:shadow-accent/20 resize-none"
                   placeholder="Tell us about your vehicle..."
                 />
               </div>
