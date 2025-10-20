@@ -37,12 +37,12 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <div className="flex items-center">
-            <div className="relative w-12 h-12 transition-transform duration-300 hover:scale-110">
+            <div className="relative w-24 h-24 transition-transform duration-300 hover:scale-110">
               <Image
                 src="https://cdn.builder.io/api/v1/image/assets%2F6a80af1db8104ff4a1b5bea732d858c0%2Ff2b50cd12c204976bcc9d8d85d404b01?format=webp&width=800"
                 alt="Hustle Muscle Logo"
-                width={48}
-                height={48}
+                width={96}
+                height={96}
                 className="w-full h-full object-contain"
               />
             </div>

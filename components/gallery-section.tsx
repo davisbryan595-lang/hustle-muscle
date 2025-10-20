@@ -48,11 +48,11 @@ export default function GallerySection() {
   const currentItem = galleryItems[currentIndex]
 
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black">
+    <section id="gallery" className="py-20 px-4 sm:px-6 lg:px-8 bg-black">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">
-            Before & <span className="text-accent">After</span>
+            <span className="text-accent">Gallery</span>
           </h2>
           <p className="text-gray-400 text-lg">See the transformation our detailing brings to every vehicle</p>
         </div>
